@@ -8,10 +8,10 @@ local CLIENT = not SERVER
 
 if SERVER then
     server = {}
-    Tunnel.bindInterface(GetCurrentResourceName(),server)
+    Tunnel.bindInterface(GetCurrentResourceName(), server)
     client = Tunnel.getInterface(GetCurrentResourceName())
 else
     client = {}
-    Tunnel.bindInterface(GetCurrentResourceName(),client)
+    Tunnel.bindInterface(GetCurrentResourceName(), client)
     server = Tunnel.getInterface(GetCurrentResourceName())
 end

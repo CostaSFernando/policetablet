@@ -1,10 +1,12 @@
 local onNui = false
 
-function client.testClient()
-    print("Cheguei no client")
-end
+-- function client.testClient()
+--     print("Cheguei no client")
+-- end
 
 RegisterCommand("server",function(source,args,rawCommand)
+    print(vRP.getUserId(source), 'UserId');
+
     server.testServer()
 end)
 
@@ -25,9 +27,10 @@ end)
 
 RegisterNUICallback('closetablet', function(data, cb)
     local player = GetPlayerPed()
+    
     local retval, entity  = GetPlayerTargetEntity(player)
     
-    print(GetInstanceId(), 'log teste')
+    print(vRP.getUserSource(player), 'log teste')
 end)
 
 

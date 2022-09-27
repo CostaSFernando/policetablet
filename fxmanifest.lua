@@ -1,22 +1,24 @@
 
 fx_version "bodacious"
-game "gta5"
+game { "gta5" }
 
 use_fxv2_oal "yes"
 lua54 "yes"
 
 ui_page "ui/index.html"
 
+ui_page_preload "yes"
+
 client_scripts {
+    "@vrp/lib/utils.lua",
+    "server-side/vRP.lua",
 	"client/client.lua"
 }
 
 server_scripts {
-    "@vrp/lib/vehicles.lua",
-    "@vrp/lib/itemlist.lua",
     "@vrp/lib/utils.lua",
-    "server/vRP.lua",
-    "server/server.lua"
+    "server-side/vRP.lua",
+    "server-side/server.lua"
 }
 
 files {
